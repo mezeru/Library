@@ -1,3 +1,4 @@
+const port = process.env.PORT || 3000
 const { query } = require('express');
 const express = require('express');
 const {graphqlHTTP} = require('express-graphql');
@@ -162,6 +163,6 @@ App.use('/gql',graphqlHTTP({
     graphiql: true
 }))
 
-App.listen(5000,()=>{
+App.listen(port,()=>{
     console.log("Server Running...");
 });
