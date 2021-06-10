@@ -158,7 +158,7 @@ const schema = new GraphQLSchema({
     mutation:rootMutationType
 })
 
-App.use('/gql',graphqlHTTP({
+App.use('/',graphqlHTTP({
     schema:schema,
     graphiql: true
 }))
